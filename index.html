@@ -3,35 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Seafoam & Co</title> <!-- Change to Sandstorm & Co if you decide -->
+  <title>Seafoam</title>
   <style>
     :root {
-      --main-color: #1a1a1a;
+      --main-color: #000;
       --accent-color: #00c2b2;
       --font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }
 
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: var(--font-family);
       background-color: #fff;
       color: var(--main-color);
+      overflow-x: hidden;
     }
 
     header {
-      background-color: #fff;
-      padding: 1.5rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 2px solid var(--main-color);
+      padding: 2rem;
+      position: sticky;
+      top: 0;
+      background: white;
+      z-index: 10;
+      border-bottom: 1px solid #ccc;
     }
 
     .logo {
-      font-size: 2rem;
+      font-size: 2.5rem;
       font-weight: 900;
-      text-transform: uppercase;
       letter-spacing: 1px;
+      text-transform: uppercase;
     }
 
     nav a {
@@ -46,15 +55,45 @@
       color: var(--accent-color);
     }
 
-    .section {
+    .hero {
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
       padding: 4rem 2rem;
-      max-width: 800px;
-      margin: 0 auto;
     }
 
-    h1, h2 {
+    .hero h1 {
+      font-size: 4rem;
       font-weight: 900;
       text-transform: uppercase;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .grid img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .grid img:hover {
+      transform: scale(1.02);
+    }
+
+    section {
+      max-width: 800px;
+      margin: auto;
+      padding: 4rem 2rem;
     }
 
     footer {
@@ -67,7 +106,7 @@
 </head>
 <body>
   <header>
-    <div class="logo">Seafoam & Co</div>
+    <div class="logo">Seafoam</div>
     <nav>
       <a href="#home">Home</a>
       <a href="#about">About</a>
@@ -76,33 +115,36 @@
     </nav>
   </header>
 
-  <section id="home" class="section">
-    <h1>Welcome to Seafoam & Co</h1>
-    <p>A bold, modern film company creating visuals that make waves.</p>
+  <section class="hero" id="home">
+    <h1>Seafoam Visuals</h1>
   </section>
 
-  <section id="about" class="section">
-    <h2>About Us</h2>
-    <p>We are a passionate, award-winning team of filmmakers dedicated to storytelling, creativity, and visual impact.</p>
+  <section id="films">
+    <div class="grid">
+      <a href="https://youtube.com" target="_blank">
+        <img src="poster1.jpg" alt="Film Poster 1" />
+      </a>
+      <a href="https://youtube.com" target="_blank">
+        <img src="poster2.jpg" alt="Film Poster 2" />
+      </a>
+      <a href="https://youtube.com" target="_blank">
+        <img src="poster3.jpg" alt="Film Poster 3" />
+      </a>
+    </div>
   </section>
 
-  <section id="films" class="section">
-    <h2>Our Films</h2>
-    <ul>
-      <li><a href="#">Film 1 – Description or tagline</a></li>
-      <li><a href="#">Film 2 – Description or tagline</a></li>
-      <li><a href="#">Film 3 – Description or tagline</a></li>
-      <!-- Add more film links here -->
-    </ul>
+  <section id="about">
+    <h2>About</h2>
+    <p>Seafoam is a bold, award-winning film company creating visuals that make waves. With a modern edge and minimalist aesthetic, we specialize in high-impact storytelling across film and media.</p>
   </section>
 
-  <section id="contact" class="section">
+  <section id="contact">
     <h2>Contact</h2>
     <p>Email us at <a href="mailto:hello@seafoamco.com">hello@seafoamco.com</a></p>
   </section>
 
   <footer>
-    &copy; 2025 Seafoam & Co. All rights reserved.
+    &copy; 2025 Seafoam. All rights reserved.
   </footer>
 </body>
 </html>
