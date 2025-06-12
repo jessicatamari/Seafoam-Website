@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seafoam & Co</title> <!-- Change to Sandstorm & Co if you decide -->
+  <style>
+    :root {
+      --main-color: #1a1a1a;
+      --accent-color: #00c2b2;
+      --font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-family);
+      background-color: #fff;
+      color: var(--main-color);
+    }
+
+    header {
+      background-color: #fff;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid var(--main-color);
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      margin-left: 2rem;
+      text-decoration: none;
+      font-weight: bold;
+      color: var(--main-color);
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: var(--accent-color);
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h1, h2 {
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      border-top: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Seafoam & Co</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#films">Films</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home" class="section">
+    <h1>Welcome to Seafoam & Co</h1>
+    <p>A bold, modern film company creating visuals that make waves.</p>
+  </section>
+
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>We are a passionate, award-winning team of filmmakers dedicated to storytelling, creativity, and visual impact.</p>
+  </section>
+
+  <section id="films" class="section">
+    <h2>Our Films</h2>
+    <ul>
+      <li><a href="#">Film 1 – Description or tagline</a></li>
+      <li><a href="#">Film 2 – Description or tagline</a></li>
+      <li><a href="#">Film 3 – Description or tagline</a></li>
+      <!-- Add more film links here -->
+    </ul>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email us at <a href="mailto:hello@seafoamco.com">hello@seafoamco.com</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Seafoam & Co. All rights reserved.
+  </footer>
+</body>
+</html>
